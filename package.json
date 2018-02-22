@@ -1,0 +1,29 @@
+{
+  "name": "my-first-blockchain",
+  "version": "1.0.0",
+  "description": "My first blockchain and cryptocurrency following the tutorial from @15Dkatz",
+  "main": "block.js",
+  "scripts": {
+    "dev-test": "nodemon dev-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silvestrevivo/my-first-blockchain.git"
+  },
+  "keywords": [
+    "blockchain",
+    "cryptocurrency",
+    "tutorial",
+    "udemy",
+    "@15Dkatz"
+  ],
+  "author": "@silvestrevivo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/silvestrevivo/my-first-blockchain/issues"
+  },
+  "homepage": "https://github.com/silvestrevivo/my-first-blockchain#readme",
+  "dependencies": {
+    "nodemon": "^1.15.1"
+  }
+}
