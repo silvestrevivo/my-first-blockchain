@@ -4,7 +4,8 @@
   "description": "My first blockchain and cryptocurrency following the tutorial from @15Dkatz",
   "main": "block.js",
   "scripts": {
-    "dev-test": "nodemon dev-test"
+    "dev-test": "nodemon dev-test",
+    "test": "jest --watchAll"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,10 @@
   },
   "homepage": "https://github.com/silvestrevivo/my-first-blockchain#readme",
   "dependencies": {
+    "crypto-js": "^3.1.9-1",
     "nodemon": "^1.15.1"
+  },
+  "devDependencies": {
+    "jest": "^22.4.1"
   }
 }
