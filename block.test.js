@@ -13,7 +13,7 @@ describe('Block', () => {
     expect(block.data).toEqual(data);
   });
 
-  it('sets the `lastHash` to match the hasf of the last block', () => {
+  it('sets the `lastHash` to match the hash of the last block', () => {
     expect(block.lastHash).toEqual(lastBlock.hash);
   });
 
