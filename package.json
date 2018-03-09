@@ -5,7 +5,9 @@
   "main": "block.js",
   "scripts": {
     "dev-test": "nodemon dev-test",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "start": "node ./app",
+    "dev": "nodemon ./app"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
   "homepage": "https://github.com/silvestrevivo/my-first-blockchain#readme",
   "dependencies": {
     "crypto-js": "^3.1.9-1",
+    "express": "^4.16.2",
     "nodemon": "^1.15.1"
   },
   "devDependencies": {
