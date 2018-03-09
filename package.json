@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/silvestrevivo/my-first-blockchain#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "crypto-js": "^3.1.9-1",
     "express": "^4.16.2",
     "nodemon": "^1.15.1"
