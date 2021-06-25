@@ -18,9 +18,9 @@ class Block {
   }
 
   // using static we make enable to be this function used if this
-  // module is exported to other files => genesis() is accesible
-  // in other words, we don't need to creacte Block instances to
-  // use this funcion => retroalimentation of class ES6
+  // module is exported to other files => genesis() is accessible
+  // in other words, we don't need to create Block instances to
+  // use this function
   static genesis() {
     return new this('Genesis time', '-----', 'f15r7-h45h', []);
   }

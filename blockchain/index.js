@@ -13,11 +13,14 @@ class Blockchain {
     return block;
   }
 
+  // These two next functions are valid to work with more peers/nodes
   isValidChain(chain) {
+    // we check if the first element of the incomingChain match
     if (JSON.stringify(chain[0]) !== JSON.stringify(Block.genesis())) {
       return false;
     }
 
+    // next check is for the rest of the elements of the incomingChain
     for (let i = 1; i < chain.length; i++) {
       const block = chain[i];
       const lastBlock = chain[i - 1];
@@ -30,17 +33,17 @@ class Blockchain {
     return true;
   }
 
-  replaceChain(newChain) {
-    if (newChain.length <= this.chain.length) {
+  replaceChain(incomingChain) { // this will be the method used to sync different peers
+    if (incomingChain.length <= this.chain.length) {
       console.log('Received chain is no longer than the current chain');
       return;
-    } else if (!this.isValidChain(newChain)) {
+    } else if (!this.isValidChain(incomingChain)) {
       console.log('The recieved chain is not valid');
       return;
     }
 
-    console.log('Replacing the new chain with the new chain');
-    this.chain = newChain;
+    console.log(`Replacing incoming blockchain with the new one`, incomingChain);
+    this.chain = incomingChain;
   }
 }
 
