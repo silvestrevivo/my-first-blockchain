@@ -7,10 +7,10 @@ class Blockchain {
 
   addBlock(data) {
     const lastBlock = this.chain[this.chain.length - 1];
-    const block = Block.mineBlock(lastBlock, data);
-    this.chain.push(block);
+    const newBlock = Block.mineBlock(lastBlock, data);
+    this.chain.push(newBlock);
 
-    return block;
+    return newBlock;
   }
 
   // These two next functions are valid to work with more peers/nodes
@@ -22,10 +22,10 @@ class Blockchain {
 
     // next check is for the rest of the elements of the incomingChain
     for (let i = 1; i < chain.length; i++) {
-      const block = chain[i];
+      const newBlock = chain[i];
       const lastBlock = chain[i - 1];
 
-      if (block.lastHash !== lastBlock.hash || block.hash !== Block.blockHash(block)) {
+      if (newBlock.lastHash !== lastBlock.hash || newBlock.hash !== Block.blockHash(newBlock)) {
         return false;
       }
     }
